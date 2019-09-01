@@ -51,3 +51,21 @@ Requiere un objeto JSON como:
   "course": "5cb4b8ce75f954a0585f7be3"
 }
 ```
+
+## Interfaces
+
+```graphql
+{
+  getPeople{
+    _id
+    name
+    email
+    ... on Monitor {
+      phone
+    }
+    ... on Student {
+      avatar
+    }
+  }
+}
+```
